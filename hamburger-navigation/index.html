@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamburger navigation</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    
+    <main>
+        <div class="hamburger">
+            <div class="hamburger__items">
+                <a class="ham_item" id="ham-item-1" href="/about-me">About me</a>
+                <a class="ham_item" id="ham-item-2" href="/projects">Projects</a>
+                <a class="ham_item" id="ham-item-3" href="/skills">Skills</a>
+                <a class="ham_item" id="ham-item-4" href="/resume">Resume</a>
+                <a class="ham_item" id="ham-item-5" href="/certificates">Certificates</a>
+                <a class="ham_item" id="ham-item-6" href="/contant-me">Contact me</a>
+            </div>
+            <div class="hamburger__button">
+                <div class="hamburger__one"></div>
+                <div class="hamburger__two"></div>
+                <div class="hamburger__tree"></div>
+            </div>
+        </div>
+        
+        <nav class="navigation" id="navigation">
+            <div class="navigation__items">
+                <div class="nav_item" id="nav-item-1"><a href="/about-me">About me</a></div>
+                <div class="nav_item" id="nav-item-2"><a href="/projects">Projects</a></div>
+                <div class="nav_item" id="nav-item-3"><a href="/skills">Skills</a></div>
+                <div class="nav_item" id="nav-item-4"><a href="/resume">Resume</a></div>
+                <div class="nav_item" id="nav-item-5"><a href="/certificates">Certificates</a></div>
+                <div class="nav_item" id="nav-item-5"><a href="/contant-me">Contact me</a></div>
+            </div>
+        </nav>
+    </main>
 </body>
 </html>

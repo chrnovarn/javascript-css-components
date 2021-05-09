@@ -1,0 +1,140 @@
+@import 'variables';
+body{
+    font: 100% $font-style;
+    color: $primary-color;
+    background-color: #eeeeee;
+}
+.hamburger{
+    position: fixed;
+    display: block;
+    width: 98%;
+    height: 2.5rem;
+    &__items{
+        display: none;
+        float: right;
+        align-items: flex-end;
+        background-color: $primary-color;
+        color: #eeeeee;
+        border-radius: 0 5px 5px 5px;
+        box-shadow: 0 4px 10px rgba($black-color,0.4);
+        a.ham_item{
+            color: #eeeeee;
+            display: block;
+            
+            padding: 1rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: $default-transition;
+            &:hover{
+                background-color: $secondary-color;
+            }
+        }
+    }
+    &__button{
+        float: right;
+        width: 1.5em;
+        height: 1.5em;
+        padding: 0.3em;
+        background-color: $primary-color;
+        border-radius: 5px 0px 0px 5px;
+        box-shadow: 0 4px 10px rgba($black-color,0.4);
+        cursor: pointer;
+        margin: 0 auto;
+        
+        div{
+            background-color: white;
+            width: 1.5em;
+            height: 0.3em;
+            margin-bottom: 0.3em;
+            transition: $default-transition;
+        }
+        
+        &.open{
+            .hamburger__one{
+                transform: translateY(0.55em) rotate(45deg);
+            }
+            .hamburger__two{
+                opacity: 0;
+            }
+            .hamburger__tree{
+                transform: translateY(-0.55em) rotate(-45deg);
+                
+            }
+        }
+    }
+
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+    
+    &__items{
+        //parent flex properties
+        display: none;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        .nav_item{
+            display: inline;
+            padding: 1rem 0.5rem;
+            font-size: 1.75rem;
+            color: $primary-color;
+            a{
+                color: $primary-color;
+                text-decoration: none;
+                transition: $default-transition;
+                
+            }
+            a:hover{
+                color: $primary-color-darker;
+                border-bottom: 5px solid $primary-color-darker;
+            }
+        }
+    }
+    
+
+    
+}   
+// Tablet
+@media(min-width : $tablet-width){
+    .hamburger{
+        height: 0rem;
+        &__items{
+            display: none;
+        }
+        
+        &__button{
+            display: none;
+        }
+    }
+    .navigation{
+        &__items{
+            display: flex;
+        }
+        
+    }
+}
+//Desktop
+@media(min-width : $desktop-width){
+    .hamburger{
+        height: 0rem;
+        &__items{
+            display: none;
+        }
+        
+        &__button{
+            display: none;
+        }
+    }
+    .navigation{
+        &__items{
+            display: flex;
+        }
+        
+    }
+}
+
