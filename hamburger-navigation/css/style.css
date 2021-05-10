@@ -1,5 +1,5 @@
 body {
-  font: 100% helvetica, sans-serif;
+  font: 100% "Roboto Mono", monospace;
   color: #4695C7;
   background-color: #eeeeee;
 }
@@ -28,14 +28,14 @@ body {
   color: #eeeeee;
   display: block;
   padding: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-decoration: none;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
 
 .hamburger__items a.ham_item:hover {
-  background-color: #A3D9FB;
+  background-color: #2B5C7A;
 }
 
 .hamburger__button {
@@ -58,6 +58,10 @@ body {
   margin-bottom: 0.3em;
   -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
+}
+
+.hamburger__button.open {
+  background-color: #2B5C7A;
 }
 
 .hamburger__button.open .hamburger__one {
@@ -109,8 +113,9 @@ body {
 .navigation__items .nav_item {
   display: inline;
   padding: 1rem 0.5rem;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   color: #4695C7;
+  cursor: pointer;
 }
 
 .navigation__items .nav_item a {
@@ -120,9 +125,32 @@ body {
   transition: 0.2s ease-out;
 }
 
-.navigation__items .nav_item a:hover {
+.navigation__items .nav_item .border_line {
+  width: 100%;
+  background-color: #2B5C7A;
+  height: 5px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.navigation__items .nav_item:hover a {
   color: #2B5C7A;
-  border-bottom: 5px solid #2B5C7A;
+}
+
+.navigation__items .nav_item:hover .border_line {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.navigation__items .selected a {
+  color: #2B5C7A;
+}
+
+.navigation__items .selected .border_line {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 @media (min-width: 768px) {
